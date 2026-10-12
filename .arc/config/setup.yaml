@@ -1,0 +1,23 @@
+package_install_commands:
+  npm: npm install {name}@{version}
+components:
+  comp_hr_api:
+    mode: local
+    test_command: pnpm -C services/hr-api test && pnpm -C services/hr-api test:e2e
+    build_command: pnpm -C services/hr-api run build
+    e2e_command: cd services/hr-api && npm run test:e2e
+  comp_notification_worker:
+    mode: local
+    test_command: pnpm -C services/notification-worker test
+    build_command: pnpm -C services/notification-worker run build
+  comp_web_app:
+    mode: local
+    test_command: pnpm -C apps/web test && pnpm -C apps/web test:e2e
+    build_command: pnpm -C apps/web run build
+    e2e_command: cd apps/web && npm run test:e2e
+commands:
+  test: (pnpm -C services/hr-api test && pnpm -C services/hr-api test:e2e) && (pnpm
+    -C services/notification-worker test) && (pnpm -C apps/web test && pnpm -C apps/web
+    test:e2e)
+  build: (pnpm -C services/hr-api run build) && (pnpm -C services/notification-worker
+    run build) && (pnpm -C apps/web run build)
