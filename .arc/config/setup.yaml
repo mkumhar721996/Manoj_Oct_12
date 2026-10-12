@@ -1,0 +1,25 @@
+components:
+  comp_web_app:
+    mode: local
+    test_command: cd apps/web && pnpm run test
+    build_command: cd apps/web && pnpm run build
+    devloop_command: cd apps/web && pnpm run typecheck
+  comp_workflow_api:
+    mode: local
+    test_command: cd services/workflow-api && pnpm test
+    build_command: cd services/workflow-api && pnpm build
+    devloop_command: cd services/workflow-api && pnpm run typecheck && pnpm run test:unit
+  comp_workflow_worker:
+    mode: local
+    test_command: cd services/workflow-worker && pnpm run test
+    build_command: cd services/workflow-worker && pnpm run build
+    devloop_command: cd services/workflow-worker && pnpm run typecheck && pnpm run
+      test
+commands:
+  test: (cd apps/web && pnpm run test) && (cd services/workflow-api && pnpm test)
+    && (cd services/workflow-worker && pnpm run test)
+  build: (cd apps/web && pnpm run build) && (cd services/workflow-api && pnpm build)
+    && (cd services/workflow-worker && pnpm run build)
+  devloop: (cd apps/web && pnpm run typecheck) && (cd services/workflow-api && pnpm
+    run typecheck && pnpm run test:unit) && (cd services/workflow-worker && pnpm run
+    typecheck && pnpm run test)
