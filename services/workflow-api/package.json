@@ -1,0 +1,33 @@
+{
+  "name": "comp-workflow-api",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Owns workflow definitions and process state; exposes CRUD for workflow design and triggers process execution.",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "pnpm@9.6.0",
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "dev": "tsx watch src/server.ts",
+    "typecheck": "tsc --noEmit",
+    "test:unit": "vitest run --config vitest.config.ts",
+    "test:e2e": "vitest run --config vitest.e2e.config.ts",
+    "test": "pnpm run test:unit && pnpm run test:e2e"
+  },
+  "dependencies": {
+    "fastify": "^5.0.0",
+    "pg": "^8.11.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "@types/pg": "^8.11.6",
+    "@types/supertest": "^6.0.2",
+    "supertest": "^7.0.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4",
+    "vitest": "^2.0.5"
+  }
+}
