@@ -1,0 +1,5 @@
+export const env = {
+  PORT: Number(process.env.PORT ?? 3000),
+  DATABASE_URL:
+    process.env.DATABASE_URL ?? 'postgres://postgres:postgres@localhost:5432/workflow_api',
+};
