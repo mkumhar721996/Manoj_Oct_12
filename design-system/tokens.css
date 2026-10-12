@@ -1,0 +1,46 @@
+/**
+ * Do not edit directly, this file was auto-generated.
+ */
+
+:root {
+  --color-fg: #1f2937; /** Default body text color. Paired with color-bg at 12.6:1 contrast, well above WCAG AA (4.5:1) for normal text. */
+  --color-fg-muted: #64748b; /** Secondary text: timestamps, helper text, metadata. */
+  --color-bg: #ffffff; /** Default page background. */
+  --color-bg-subtle: #f8fafc; /** Recessed surface background for the app shell (sidebar, table header, page canvas behind cards). */
+  --color-primary: #1d4ed8; /** Brand/action color for primary buttons, links, active nav state, and focus rings. */
+  --color-primary-hover: #163faf; /** Hover/active state for primary-colored elements. */
+  --color-primary-fg: #ffffff; /** Text/icon color placed on top of color-primary. */
+  --color-border: #d1d6dc; /** Default border for inputs, cards, dividers. */
+  --color-success: #169858; /** Successful/completed workflow run status. */
+  --color-danger: #c92121; /** Failed workflow run status and destructive actions. */
+  --color-warning: #b46c02; /** Workflow runs awaiting input or paused. */
+  --space-1: 4px; /** Tightest spacing: icon-to-label gaps, chip padding. */
+  --space-2: 8px; /** Default control padding and gaps between related elements. */
+  --space-3: 16px; /** Spacing between distinct fields/rows and card padding. */
+  --space-4: 24px; /** Section-level spacing between major page regions. */
+  --radius-sm: 4px; /** Chips, badges, small controls. */
+  --radius-md: 6px; /** Buttons, inputs, default control radius. */
+  --radius-lg: 10px; /** Cards and panels. */
+  --font-family-base: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; /** System font stack for all UI text; avoids a web-font load for an internal tool. */
+  --font-family-mono: ui-monospace, SFMono-Regular, 'Roboto Mono', Consolas, monospace; /** Monospace stack for IDs, payloads, and code in workflow step configuration. */
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+  --font-size-sm: 12px; /** Table cells, helper text, metadata. */
+  --font-size-md: 14px; /** Default body and control text. */
+  --font-size-lg: 20px; /** Page and section headings. */
+  --shadow-sm: 0px 1px 2px 0px rgb(5.88% 9.02% 16.47% / 0.08); /** Resting elevation for cards. */
+  --shadow-md: 0px 4px 12px 0px rgb(5.88% 9.02% 16.47% / 0.12); /** Elevated surfaces: dropdowns, popovers, the step config panel. */
+  --button-primary-background: var(--color-primary);
+  --button-primary-background-hover: var(--color-primary-hover);
+  --button-primary-foreground: var(--color-primary-fg);
+  --button-primary-radius: var(--radius-md);
+  --button-secondary-background: var(--color-bg);
+  --button-secondary-foreground: var(--color-fg);
+  --button-secondary-border: var(--color-border);
+  --button-secondary-radius: var(--radius-md);
+  --card-default-background: var(--color-bg);
+  --card-default-border: var(--color-border);
+  --card-default-radius: var(--radius-lg);
+  --card-default-padding: var(--space-3);
+}

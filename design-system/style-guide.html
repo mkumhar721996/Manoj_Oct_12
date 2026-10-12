@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<title>Design System Style Guide</title>
+<link rel="stylesheet" href="tokens.css" />
+<link rel="stylesheet" href="prototype-utils.css" />
+<style>
+  .sg-section { padding: var(--space-4) 0; border-bottom: 1px solid var(--color-border); }
+  .sg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: var(--space-3); }
+  .sg-swatch { border: 1px solid var(--color-border); border-radius: var(--radius-md); overflow: hidden; }
+  .sg-swatch-color { height: 56px; }
+  .sg-swatch-label { padding: var(--space-2); font-size: var(--font-size-sm); }
+  .sg-swatch-label code { display: block; color: var(--color-fg-muted); }
+  .sg-dim-bar { background: var(--color-primary); height: 16px; }
+  .sg-row { display: flex; align-items: center; gap: var(--space-3); flex-wrap: wrap; }
+  .sg-page { max-width: 1040px; margin: 0 auto; padding: 0 var(--space-4); }
+  .sg-shadow-box { width: 120px; height: 72px; background: var(--color-bg); border-radius: var(--radius-md); display: flex; align-items: center; justify-content: center; font-size: var(--font-size-sm); }
+</style>
+</head>
+<body>
+<div class="sg-page">
+
+  <header class="sg-section">
+    <h1 class="text-lg">Design System Style Guide</h1>
+    <p class="text-muted">Tokens, components, and UI guidelines for the workflow builder &amp; monitor web app.</p>
+  </header>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Colors</h2>
+    <div class="sg-grid">
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-fg)"></div>
+        <div class="sg-swatch-label">color-fg<code>--color-fg</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-fg-muted)"></div>
+        <div class="sg-swatch-label">color-fg-muted<code>--color-fg-muted</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-bg); border-bottom: 1px solid var(--color-border)"></div>
+        <div class="sg-swatch-label">color-bg<code>--color-bg</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-bg-subtle)"></div>
+        <div class="sg-swatch-label">color-bg-subtle<code>--color-bg-subtle</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-primary)"></div>
+        <div class="sg-swatch-label">color-primary<code>--color-primary</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-primary-hover)"></div>
+        <div class="sg-swatch-label">color-primary-hover<code>--color-primary-hover</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-primary-fg); border-bottom: 1px solid var(--color-border)"></div>
+        <div class="sg-swatch-label">color-primary-fg<code>--color-primary-fg</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-border)"></div>
+        <div class="sg-swatch-label">color-border<code>--color-border</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-success)"></div>
+        <div class="sg-swatch-label">color-success<code>--color-success</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-danger)"></div>
+        <div class="sg-swatch-label">color-danger<code>--color-danger</code></div>
+      </div>
+      <div class="sg-swatch">
+        <div class="sg-swatch-color" style="background: var(--color-warning)"></div>
+        <div class="sg-swatch-label">color-warning<code>--color-warning</code></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Spacing</h2>
+    <div class="stack-2">
+      <div class="sg-row"><span class="text-sm">space-1</span><div class="sg-dim-bar" style="width: var(--space-1)"></div></div>
+      <div class="sg-row"><span class="text-sm">space-2</span><div class="sg-dim-bar" style="width: var(--space-2)"></div></div>
+      <div class="sg-row"><span class="text-sm">space-3</span><div class="sg-dim-bar" style="width: var(--space-3)"></div></div>
+      <div class="sg-row"><span class="text-sm">space-4</span><div class="sg-dim-bar" style="width: var(--space-4)"></div></div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Radii</h2>
+    <div class="sg-row">
+      <div class="sg-shadow-box" style="border: 1px solid var(--color-border); border-radius: var(--radius-sm)">radius-sm</div>
+      <div class="sg-shadow-box" style="border: 1px solid var(--color-border); border-radius: var(--radius-md)">radius-md</div>
+      <div class="sg-shadow-box" style="border: 1px solid var(--color-border); border-radius: var(--radius-lg)">radius-lg</div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Type scale</h2>
+    <div class="stack-2">
+      <div class="text-sm">font-size-sm &mdash; The quick brown fox jumps over the lazy dog.</div>
+      <div class="text-md">font-size-md &mdash; The quick brown fox jumps over the lazy dog.</div>
+      <div class="text-lg">font-size-lg &mdash; The quick brown fox jumps over the lazy dog.</div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Shadows</h2>
+    <div class="sg-row">
+      <div class="sg-shadow-box" style="box-shadow: var(--shadow-sm)">shadow-sm</div>
+      <div class="sg-shadow-box" style="box-shadow: var(--shadow-md)">shadow-md</div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Buttons</h2>
+    <div class="sg-row">
+      <button class="btn btn-primary">Run workflow</button>
+      <button class="btn btn-secondary">Cancel</button>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Chips</h2>
+    <div class="sg-row">
+      <span class="chip chip-success">Completed</span>
+      <span class="chip chip-warning">Awaiting input</span>
+      <span class="chip chip-danger">Failed</span>
+      <span class="chip">Draft</span>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Card</h2>
+    <div class="card" style="max-width: 320px;">
+      <h3 class="card-title">Invoice approval</h3>
+      <p class="text-sm text-muted">4 steps &middot; last run 2 hours ago</p>
+      <div class="row" style="margin-top: var(--space-2)">
+        <span class="chip chip-success">Completed</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Form controls</h2>
+    <div class="field" style="max-width: 320px;">
+      <label class="label" for="sg-name">Workflow name</label>
+      <input class="input" id="sg-name" type="text" placeholder="e.g. Invoice approval" />
+    </div>
+    <div class="field" style="max-width: 320px; margin-top: var(--space-3);">
+      <label class="label" for="sg-trigger">Trigger</label>
+      <select class="select" id="sg-trigger">
+        <option>On form submission</option>
+        <option>On schedule</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Table</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Run</th>
+          <th>Workflow</th>
+          <th>Status</th>
+          <th>Started</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="mono">run_8f2a</td>
+          <td>Invoice approval</td>
+          <td><span class="chip chip-success">Completed</span></td>
+          <td>09:14</td>
+        </tr>
+        <tr>
+          <td class="mono">run_91bc</td>
+          <td>Employee onboarding</td>
+          <td><span class="chip chip-warning">Awaiting input</span></td>
+          <td>09:02</td>
+        </tr>
+        <tr>
+          <td class="mono">run_7d41</td>
+          <td>Expense reimbursement</td>
+          <td><span class="chip chip-danger">Failed</span></td>
+          <td>08:47</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">Panel</h2>
+    <div class="panel" style="max-width: 280px; padding: var(--space-3);">
+      <p class="text-sm" style="margin: 0;">Step configuration flyout content goes here.</p>
+    </div>
+  </section>
+
+  <section class="sg-section">
+    <h2 class="text-lg">UI guidelines</h2>
+
+    <p class="text-muted">Product: internal workflow builder and process monitor for employees. Single web client, 50-100 concurrent internal users &mdash; not a public-facing product.</p>
+
+    <h3 class="text-md" style="font-weight: var(--font-weight-bold);">Navigation</h3>
+    <ul>
+      <li>Persistent left sidebar with two top-level sections: <strong>Workflows</strong> (design/configure) and <strong>Runs</strong> (monitor in-progress and past process executions). A sidebar beats a top bar here because the two sections are peers a user jumps between constantly, not a linear flow.</li>
+      <li>No breadcrumb trail beyond "section &gt; item name" &mdash; workflow definitions are flat, not nested folders, so deeper breadcrumbs would describe structure that doesn't exist.</li>
+    </ul>
+
+    <h3 class="text-md" style="font-weight: var(--font-weight-bold);">Layout and density</h3>
+    <ul>
+      <li>Default to a data-dense console layout (compact row heights, <code>font-size-sm</code> for tabular data) since this is an internal tool used all day by the same ~100 people, who benefit more from seeing more rows than from whitespace.</li>
+      <li>Design for desktop viewports (1280px+) only; this is a workday tool used at a desk, not on mobile, so no mobile breakpoint is required.</li>
+      <li>Reserve generous spacing (<code>space-4</code>) for the workflow design canvas itself, where visually tracing step connections matters more than density.</li>
+    </ul>
+
+    <h3 class="text-md" style="font-weight: var(--font-weight-bold);">Component usage</h3>
+    <ul>
+      <li>Use <code>.table</code> for any list of workflow runs or step executions &mdash; these are scanned and compared row-to-row, which a card grid doesn't support.</li>
+      <li>Use <code>.card</code> for a single workflow's summary or a run's detail view, where one item's grouped attributes are the focus rather than comparison across many items.</li>
+      <li>Use <code>.chip</code> (<code>chip-success</code> / <code>chip-warning</code> / <code>chip-danger</code>) for run and step status everywhere it appears, so status is recognizable at a glance regardless of which screen it's on.</li>
+      <li>Use <code>.btn-primary</code> for the single most important action per screen (e.g. "Run workflow", "Save"); use <code>.btn-secondary</code> for everything else, so users always have one obvious next step.</li>
+      <li>Use <code>.panel</code> for transient overlays (dropdowns, the step configuration flyout) &mdash; its shadow distinguishes "floating above the page" from the flat <code>.card</code>, which lives in the page flow.</li>
+    </ul>
+
+    <h3 class="text-md" style="font-weight: var(--font-weight-bold);">Theme</h3>
+    <ul>
+      <li>Light theme only. This is a business-hours-only internal tool (see ADR-0007) viewed in lit offices, so a dark mode isn't worth the added maintenance surface.</li>
+    </ul>
+
+    <h3 class="text-md" style="font-weight: var(--font-weight-bold);">Voice and tone</h3>
+    <ul>
+      <li>Direct and operational: describe what happened or what to do next ("3 steps failed", "Retry step"), not conversational filler. Employees are debugging a business process, not being onboarded to a consumer app.</li>
+      <li>Use the same terms as the workflow domain itself (workflow, run, step) consistently in every label; never substitute synonyms like "job" or "task" for "step".</li>
+    </ul>
+  </section>
+
+</div>
+</body>
+</html>

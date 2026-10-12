@@ -1,0 +1,202 @@
+/* Base */
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-fg);
+  background: var(--color-bg);
+}
+
+code,
+pre,
+.mono {
+  font-family: var(--font-family-mono);
+}
+
+/* Text utilities */
+
+.text-sm {
+  font-size: var(--font-size-sm);
+}
+
+.text-md {
+  font-size: var(--font-size-md);
+}
+
+.text-lg {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+}
+
+.text-muted {
+  color: var(--color-fg-muted);
+}
+
+/* Spacing utilities */
+
+.stack-1 > * + * {
+  margin-top: var(--space-1);
+}
+
+.stack-2 > * + * {
+  margin-top: var(--space-2);
+}
+
+.stack-3 > * + * {
+  margin-top: var(--space-3);
+}
+
+.stack-4 > * + * {
+  margin-top: var(--space-4);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+/* Buttons */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: var(--button-primary-background);
+  color: var(--button-primary-foreground);
+  border-radius: var(--button-primary-radius);
+}
+
+.btn-primary:hover {
+  background: var(--button-primary-background-hover);
+}
+
+.btn-secondary {
+  background: var(--button-secondary-background);
+  color: var(--button-secondary-foreground);
+  border: 1px solid var(--button-secondary-border);
+  border-radius: var(--button-secondary-radius);
+}
+
+.btn-secondary:hover {
+  background: var(--color-bg-subtle);
+}
+
+/* Card */
+
+.card {
+  background: var(--card-default-background);
+  border: 1px solid var(--card-default-border);
+  border-radius: var(--card-default-radius);
+  padding: var(--card-default-padding);
+  box-shadow: var(--shadow-sm);
+}
+
+.card-title {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  margin: 0 0 var(--space-2) 0;
+}
+
+/* Chips / status badges */
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-1) var(--space-2);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  border-radius: var(--radius-sm);
+  background: var(--color-bg-subtle);
+  color: var(--color-fg);
+}
+
+.chip-success {
+  background: var(--color-success);
+  color: var(--color-primary-fg);
+}
+
+.chip-danger {
+  background: var(--color-danger);
+  color: var(--color-primary-fg);
+}
+
+.chip-warning {
+  background: var(--color-warning);
+  color: var(--color-primary-fg);
+}
+
+/* Form controls */
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--color-fg-muted);
+}
+
+.input,
+.select,
+.textarea {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  color: var(--color-fg);
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-2);
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 1px;
+}
+
+/* Table (workflow run lists) */
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: var(--font-size-sm);
+}
+
+.table th {
+  text-align: left;
+  padding: var(--space-2) var(--space-3);
+  background: var(--color-bg-subtle);
+  color: var(--color-fg-muted);
+  font-weight: var(--font-weight-medium);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.table td {
+  padding: var(--space-2) var(--space-3);
+  border-bottom: 1px solid var(--color-border);
+}
+
+/* Panels (elevated surfaces: dropdowns, step config) */
+
+.panel {
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
